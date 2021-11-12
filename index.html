@@ -20,7 +20,7 @@
       <button @click="addTask()">Aggiungi</button>
       <!-- lista -->
       <ul>
-        <li v-for="task, i in tasks" :key="i">
+        <li v-for="task, i in tasks" :key="i" @click="itemDone(i)" id="my-list">
           {{tasks[i].text}}
           <span @click="removeItem(i)"> &#x02A02; </span>
         </li>

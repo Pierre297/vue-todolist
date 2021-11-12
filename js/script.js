@@ -24,6 +24,17 @@ var app = new Vue (
             addTask(){
                 this.tasks.push(this.newTask);
                 this.newTask = "";
+            },
+            itemDone(index){
+                if(this.tasks[index].done == true){
+                    this.tasks[index].done == false;
+                    console.log("false");
+                }else{
+                    this.tasks[index].done == true;
+                    console.log("true");
+
+
+                }
             }
         }
     }
